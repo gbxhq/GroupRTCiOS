@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4AC613DE2148EE15008DFA3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC613DD2148EE15008DFA3E /* AppDelegate.m */; };
+		4AC613E12148EE15008DFA3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC613E02148EE15008DFA3E /* ViewController.m */; };
+		4AC613E42148EE15008DFA3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC613E22148EE15008DFA3E /* Main.storyboard */; };
+		4AC613E62148EE15008DFA3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC613E52148EE15008DFA3E /* Assets.xcassets */; };
+		4AC613E92148EE15008DFA3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC613E72148EE15008DFA3E /* LaunchScreen.storyboard */; };
+		4AC613EC2148EE15008DFA3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC613EB2148EE15008DFA3E /* main.m */; };
+		4AC614232148EEBB008DFA3E /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC613F32148EEBB008DFA3E /* SRWebSocket.m */; };
+		4AC614242148EEBB008DFA3E /* NSRunLoop+SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC613F42148EEBB008DFA3E /* NSRunLoop+SRWebSocket.m */; };
+		4AC614252148EEBB008DFA3E /* SRSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC613F52148EEBB008DFA3E /* SRSecurityPolicy.m */; };
+		4AC614262148EEBB008DFA3E /* SRProxyConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC613FA2148EEBB008DFA3E /* SRProxyConnect.m */; };
+		4AC614272148EEBB008DFA3E /* SRRunLoopThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC613FE2148EEBB008DFA3E /* SRRunLoopThread.m */; };
+		4AC614282148EEBB008DFA3E /* SRPinningSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC614012148EEBB008DFA3E /* SRPinningSecurityPolicy.m */; };
+		4AC614292148EEBB008DFA3E /* SRDelegateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC614042148EEBB008DFA3E /* SRDelegateController.m */; };
+		4AC6142A2148EEBB008DFA3E /* SRMutex.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6140A2148EEBB008DFA3E /* SRMutex.m */; };
+		4AC6142B2148EEBB008DFA3E /* SRHTTPConnectMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6140B2148EEBB008DFA3E /* SRHTTPConnectMessage.m */; };
+		4AC6142C2148EEBB008DFA3E /* SRURLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6140E2148EEBB008DFA3E /* SRURLUtilities.m */; };
+		4AC6142D2148EEBB008DFA3E /* SRLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC614102148EEBB008DFA3E /* SRLog.m */; };
+		4AC6142E2148EEBB008DFA3E /* SRHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC614112148EEBB008DFA3E /* SRHash.m */; };
+		4AC6142F2148EEBB008DFA3E /* SRError.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC614142148EEBB008DFA3E /* SRError.m */; };
+		4AC614302148EEBB008DFA3E /* SRRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC614152148EEBB008DFA3E /* SRRandom.m */; };
+		4AC614312148EEBB008DFA3E /* SRSIMDHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC614172148EEBB008DFA3E /* SRSIMDHelpers.m */; };
+		4AC614322148EEBB008DFA3E /* SRIOConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6141A2148EEBB008DFA3E /* SRIOConsumer.m */; };
+		4AC614332148EEBB008DFA3E /* SRIOConsumerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6141C2148EEBB008DFA3E /* SRIOConsumerPool.m */; };
+		4AC614342148EEBB008DFA3E /* SRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6141D2148EEBB008DFA3E /* SRConstants.m */; };
+		4AC614352148EEBB008DFA3E /* NSURLRequest+SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC614222148EEBB008DFA3E /* NSURLRequest+SRWebSocket.m */; };
+		4AC614382148F117008DFA3E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC614372148F117008DFA3E /* libicucore.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4AC613D92148EE14008DFA3E /* RTCWebSocketDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTCWebSocketDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AC613DC2148EE15008DFA3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4AC613DD2148EE15008DFA3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4AC613DF2148EE15008DFA3E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4AC613E02148EE15008DFA3E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4AC613E32148EE15008DFA3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4AC613E52148EE15008DFA3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4AC613E82148EE15008DFA3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4AC613EA2148EE15008DFA3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AC613EB2148EE15008DFA3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4AC613F32148EEBB008DFA3E /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		4AC613F42148EEBB008DFA3E /* NSRunLoop+SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunLoop+SRWebSocket.m"; sourceTree = "<group>"; };
+		4AC613F52148EEBB008DFA3E /* SRSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSecurityPolicy.m; sourceTree = "<group>"; };
+		4AC613F62148EEBB008DFA3E /* SocketRocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketRocket.h; sourceTree = "<group>"; };
+		4AC613F82148EEBB008DFA3E /* SRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRConstants.h; sourceTree = "<group>"; };
+		4AC613FA2148EEBB008DFA3E /* SRProxyConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRProxyConnect.m; sourceTree = "<group>"; };
+		4AC613FB2148EEBB008DFA3E /* SRProxyConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRProxyConnect.h; sourceTree = "<group>"; };
+		4AC613FD2148EEBB008DFA3E /* SRRunLoopThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRunLoopThread.h; sourceTree = "<group>"; };
+		4AC613FE2148EEBB008DFA3E /* SRRunLoopThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRunLoopThread.m; sourceTree = "<group>"; };
+		4AC614002148EEBB008DFA3E /* SRPinningSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRPinningSecurityPolicy.h; sourceTree = "<group>"; };
+		4AC614012148EEBB008DFA3E /* SRPinningSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRPinningSecurityPolicy.m; sourceTree = "<group>"; };
+		4AC614022148EEBB008DFA3E /* NSRunLoop+SRWebSocketPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunLoop+SRWebSocketPrivate.h"; sourceTree = "<group>"; };
+		4AC614042148EEBB008DFA3E /* SRDelegateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRDelegateController.m; sourceTree = "<group>"; };
+		4AC614052148EEBB008DFA3E /* SRDelegateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDelegateController.h; sourceTree = "<group>"; };
+		4AC614062148EEBB008DFA3E /* NSURLRequest+SRWebSocketPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+SRWebSocketPrivate.h"; sourceTree = "<group>"; };
+		4AC614082148EEBB008DFA3E /* SRHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHash.h; sourceTree = "<group>"; };
+		4AC614092148EEBB008DFA3E /* SRLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRLog.h; sourceTree = "<group>"; };
+		4AC6140A2148EEBB008DFA3E /* SRMutex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMutex.m; sourceTree = "<group>"; };
+		4AC6140B2148EEBB008DFA3E /* SRHTTPConnectMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHTTPConnectMessage.m; sourceTree = "<group>"; };
+		4AC6140C2148EEBB008DFA3E /* SRSIMDHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSIMDHelpers.h; sourceTree = "<group>"; };
+		4AC6140D2148EEBB008DFA3E /* SRRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRandom.h; sourceTree = "<group>"; };
+		4AC6140E2148EEBB008DFA3E /* SRURLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRURLUtilities.m; sourceTree = "<group>"; };
+		4AC6140F2148EEBB008DFA3E /* SRError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRError.h; sourceTree = "<group>"; };
+		4AC614102148EEBB008DFA3E /* SRLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRLog.m; sourceTree = "<group>"; };
+		4AC614112148EEBB008DFA3E /* SRHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRHash.m; sourceTree = "<group>"; };
+		4AC614122148EEBB008DFA3E /* SRMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMutex.h; sourceTree = "<group>"; };
+		4AC614132148EEBB008DFA3E /* SRHTTPConnectMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRHTTPConnectMessage.h; sourceTree = "<group>"; };
+		4AC614142148EEBB008DFA3E /* SRError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRError.m; sourceTree = "<group>"; };
+		4AC614152148EEBB008DFA3E /* SRRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRandom.m; sourceTree = "<group>"; };
+		4AC614162148EEBB008DFA3E /* SRURLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRURLUtilities.h; sourceTree = "<group>"; };
+		4AC614172148EEBB008DFA3E /* SRSIMDHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSIMDHelpers.m; sourceTree = "<group>"; };
+		4AC614192148EEBB008DFA3E /* SRIOConsumerPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIOConsumerPool.h; sourceTree = "<group>"; };
+		4AC6141A2148EEBB008DFA3E /* SRIOConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIOConsumer.m; sourceTree = "<group>"; };
+		4AC6141B2148EEBB008DFA3E /* SRIOConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIOConsumer.h; sourceTree = "<group>"; };
+		4AC6141C2148EEBB008DFA3E /* SRIOConsumerPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIOConsumerPool.m; sourceTree = "<group>"; };
+		4AC6141D2148EEBB008DFA3E /* SRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRConstants.m; sourceTree = "<group>"; };
+		4AC6141E2148EEBB008DFA3E /* NSURLRequest+SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+SRWebSocket.h"; sourceTree = "<group>"; };
+		4AC6141F2148EEBB008DFA3E /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		4AC614202148EEBB008DFA3E /* NSRunLoop+SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunLoop+SRWebSocket.h"; sourceTree = "<group>"; };
+		4AC614212148EEBB008DFA3E /* SRSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSecurityPolicy.h; sourceTree = "<group>"; };
+		4AC614222148EEBB008DFA3E /* NSURLRequest+SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+SRWebSocket.m"; sourceTree = "<group>"; };
+		4AC614372148F117008DFA3E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AC613D62148EE14008DFA3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC614382148F117008DFA3E /* libicucore.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4AC613D02148EE14008DFA3E = {
+			isa = PBXGroup;
+			children = (
+				4AC613DB2148EE14008DFA3E /* RTCWebSocketDemo */,
+				4AC613DA2148EE14008DFA3E /* Products */,
+				4AC614362148F116008DFA3E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4AC613DA2148EE14008DFA3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AC613D92148EE14008DFA3E /* RTCWebSocketDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4AC613DB2148EE14008DFA3E /* RTCWebSocketDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4AC613DC2148EE15008DFA3E /* AppDelegate.h */,
+				4AC613DD2148EE15008DFA3E /* AppDelegate.m */,
+				4AC613DF2148EE15008DFA3E /* ViewController.h */,
+				4AC613E02148EE15008DFA3E /* ViewController.m */,
+				4AC613F22148EEBB008DFA3E /* SocketRocket */,
+				4AC613E22148EE15008DFA3E /* Main.storyboard */,
+				4AC613E52148EE15008DFA3E /* Assets.xcassets */,
+				4AC613E72148EE15008DFA3E /* LaunchScreen.storyboard */,
+				4AC613EA2148EE15008DFA3E /* Info.plist */,
+				4AC613EB2148EE15008DFA3E /* main.m */,
+			);
+			path = RTCWebSocketDemo;
+			sourceTree = "<group>";
+		};
+		4AC613F22148EEBB008DFA3E /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				4AC613F32148EEBB008DFA3E /* SRWebSocket.m */,
+				4AC613F42148EEBB008DFA3E /* NSRunLoop+SRWebSocket.m */,
+				4AC613F52148EEBB008DFA3E /* SRSecurityPolicy.m */,
+				4AC613F62148EEBB008DFA3E /* SocketRocket.h */,
+				4AC613F72148EEBB008DFA3E /* Internal */,
+				4AC6141E2148EEBB008DFA3E /* NSURLRequest+SRWebSocket.h */,
+				4AC6141F2148EEBB008DFA3E /* SRWebSocket.h */,
+				4AC614202148EEBB008DFA3E /* NSRunLoop+SRWebSocket.h */,
+				4AC614212148EEBB008DFA3E /* SRSecurityPolicy.h */,
+				4AC614222148EEBB008DFA3E /* NSURLRequest+SRWebSocket.m */,
+			);
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		4AC613F72148EEBB008DFA3E /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				4AC613F82148EEBB008DFA3E /* SRConstants.h */,
+				4AC613F92148EEBB008DFA3E /* Proxy */,
+				4AC613FC2148EEBB008DFA3E /* RunLoop */,
+				4AC613FF2148EEBB008DFA3E /* Security */,
+				4AC614022148EEBB008DFA3E /* NSRunLoop+SRWebSocketPrivate.h */,
+				4AC614032148EEBB008DFA3E /* Delegate */,
+				4AC614062148EEBB008DFA3E /* NSURLRequest+SRWebSocketPrivate.h */,
+				4AC614072148EEBB008DFA3E /* Utilities */,
+				4AC614182148EEBB008DFA3E /* IOConsumer */,
+				4AC6141D2148EEBB008DFA3E /* SRConstants.m */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		4AC613F92148EEBB008DFA3E /* Proxy */ = {
+			isa = PBXGroup;
+			children = (
+				4AC613FA2148EEBB008DFA3E /* SRProxyConnect.m */,
+				4AC613FB2148EEBB008DFA3E /* SRProxyConnect.h */,
+			);
+			path = Proxy;
+			sourceTree = "<group>";
+		};
+		4AC613FC2148EEBB008DFA3E /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				4AC613FD2148EEBB008DFA3E /* SRRunLoopThread.h */,
+				4AC613FE2148EEBB008DFA3E /* SRRunLoopThread.m */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		4AC613FF2148EEBB008DFA3E /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				4AC614002148EEBB008DFA3E /* SRPinningSecurityPolicy.h */,
+				4AC614012148EEBB008DFA3E /* SRPinningSecurityPolicy.m */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		4AC614032148EEBB008DFA3E /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4AC614042148EEBB008DFA3E /* SRDelegateController.m */,
+				4AC614052148EEBB008DFA3E /* SRDelegateController.h */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		4AC614072148EEBB008DFA3E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4AC614082148EEBB008DFA3E /* SRHash.h */,
+				4AC614092148EEBB008DFA3E /* SRLog.h */,
+				4AC6140A2148EEBB008DFA3E /* SRMutex.m */,
+				4AC6140B2148EEBB008DFA3E /* SRHTTPConnectMessage.m */,
+				4AC6140C2148EEBB008DFA3E /* SRSIMDHelpers.h */,
+				4AC6140D2148EEBB008DFA3E /* SRRandom.h */,
+				4AC6140E2148EEBB008DFA3E /* SRURLUtilities.m */,
+				4AC6140F2148EEBB008DFA3E /* SRError.h */,
+				4AC614102148EEBB008DFA3E /* SRLog.m */,
+				4AC614112148EEBB008DFA3E /* SRHash.m */,
+				4AC614122148EEBB008DFA3E /* SRMutex.h */,
+				4AC614132148EEBB008DFA3E /* SRHTTPConnectMessage.h */,
+				4AC614142148EEBB008DFA3E /* SRError.m */,
+				4AC614152148EEBB008DFA3E /* SRRandom.m */,
+				4AC614162148EEBB008DFA3E /* SRURLUtilities.h */,
+				4AC614172148EEBB008DFA3E /* SRSIMDHelpers.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4AC614182148EEBB008DFA3E /* IOConsumer */ = {
+			isa = PBXGroup;
+			children = (
+				4AC614192148EEBB008DFA3E /* SRIOConsumerPool.h */,
+				4AC6141A2148EEBB008DFA3E /* SRIOConsumer.m */,
+				4AC6141B2148EEBB008DFA3E /* SRIOConsumer.h */,
+				4AC6141C2148EEBB008DFA3E /* SRIOConsumerPool.m */,
+			);
+			path = IOConsumer;
+			sourceTree = "<group>";
+		};
+		4AC614362148F116008DFA3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AC614372148F117008DFA3E /* libicucore.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4AC613D82148EE14008DFA3E /* RTCWebSocketDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AC613EF2148EE15008DFA3E /* Build configuration list for PBXNativeTarget "RTCWebSocketDemo" */;
+			buildPhases = (
+				4AC613D52148EE14008DFA3E /* Sources */,
+				4AC613D62148EE14008DFA3E /* Frameworks */,
+				4AC613D72148EE14008DFA3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RTCWebSocketDemo;
+			productName = RTCWebSocketDemo;
+			productReference = 4AC613D92148EE14008DFA3E /* RTCWebSocketDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4AC613D12148EE14008DFA3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = sipsys;
+				TargetAttributes = {
+					4AC613D82148EE14008DFA3E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4AC613D42148EE14008DFA3E /* Build configuration list for PBXProject "RTCWebSocketDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4AC613D02148EE14008DFA3E;
+			productRefGroup = 4AC613DA2148EE14008DFA3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4AC613D82148EE14008DFA3E /* RTCWebSocketDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4AC613D72148EE14008DFA3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC613E92148EE15008DFA3E /* LaunchScreen.storyboard in Resources */,
+				4AC613E62148EE15008DFA3E /* Assets.xcassets in Resources */,
+				4AC613E42148EE15008DFA3E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4AC613D52148EE14008DFA3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC6142A2148EEBB008DFA3E /* SRMutex.m in Sources */,
+				4AC614312148EEBB008DFA3E /* SRSIMDHelpers.m in Sources */,
+				4AC614272148EEBB008DFA3E /* SRRunLoopThread.m in Sources */,
+				4AC614322148EEBB008DFA3E /* SRIOConsumer.m in Sources */,
+				4AC614332148EEBB008DFA3E /* SRIOConsumerPool.m in Sources */,
+				4AC614292148EEBB008DFA3E /* SRDelegateController.m in Sources */,
+				4AC6142F2148EEBB008DFA3E /* SRError.m in Sources */,
+				4AC6142D2148EEBB008DFA3E /* SRLog.m in Sources */,
+				4AC614302148EEBB008DFA3E /* SRRandom.m in Sources */,
+				4AC614252148EEBB008DFA3E /* SRSecurityPolicy.m in Sources */,
+				4AC614232148EEBB008DFA3E /* SRWebSocket.m in Sources */,
+				4AC6142C2148EEBB008DFA3E /* SRURLUtilities.m in Sources */,
+				4AC613E12148EE15008DFA3E /* ViewController.m in Sources */,
+				4AC613EC2148EE15008DFA3E /* main.m in Sources */,
+				4AC614242148EEBB008DFA3E /* NSRunLoop+SRWebSocket.m in Sources */,
+				4AC614262148EEBB008DFA3E /* SRProxyConnect.m in Sources */,
+				4AC6142B2148EEBB008DFA3E /* SRHTTPConnectMessage.m in Sources */,
+				4AC614282148EEBB008DFA3E /* SRPinningSecurityPolicy.m in Sources */,
+				4AC6142E2148EEBB008DFA3E /* SRHash.m in Sources */,
+				4AC614342148EEBB008DFA3E /* SRConstants.m in Sources */,
+				4AC613DE2148EE15008DFA3E /* AppDelegate.m in Sources */,
+				4AC614352148EEBB008DFA3E /* NSURLRequest+SRWebSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4AC613E22148EE15008DFA3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AC613E32148EE15008DFA3E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4AC613E72148EE15008DFA3E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AC613E82148EE15008DFA3E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4AC613ED2148EE15008DFA3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4AC613EE2148EE15008DFA3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4AC613F02148EE15008DFA3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QF8M8CA7XR;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = RTCWebSocketDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sipsys.RTCWebSocketDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4AC613F12148EE15008DFA3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QF8M8CA7XR;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = RTCWebSocketDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sipsys.RTCWebSocketDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4AC613D42148EE14008DFA3E /* Build configuration list for PBXProject "RTCWebSocketDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AC613ED2148EE15008DFA3E /* Debug */,
+				4AC613EE2148EE15008DFA3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AC613EF2148EE15008DFA3E /* Build configuration list for PBXNativeTarget "RTCWebSocketDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AC613F02148EE15008DFA3E /* Debug */,
+				4AC613F12148EE15008DFA3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4AC613D12148EE14008DFA3E /* Project object */;
+}
