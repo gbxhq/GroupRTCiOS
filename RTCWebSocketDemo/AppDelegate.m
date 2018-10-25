@@ -11,6 +11,9 @@
 @interface AppDelegate ()
 {
    SRWebSocket *_webSocket;
+    Participate *localParticipant;
+    //存放所有参与者
+    NSMutableDictionary *Participants;
 }
 
 @end
@@ -20,10 +23,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    [self connectWebSocket];
-    NSLog(@"启动");
-    
+    //初始化字典存放Participants
+    Participants = [[NSMutableDictionary alloc] init];
     return YES;
 }
 
@@ -66,6 +67,7 @@
 }
 
 - (void)sendWebSocket:(NSString *)message{
+    NSLog(@"【***Sending message***】: %@",message);
     [_webSocket sendString:message error:NULL];
 }
 
@@ -79,24 +81,37 @@
     _webSocket = nil;
 }
 
+
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessageWithString:(nonnull NSString *)string {
-    NSLog(@"webSocket Received \"%@\"", string);
+    NSLog(@"【***Received message***】: %@ ", string);
     
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *rootDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-//    NSString *messageId = [rootDictionary getStringValueForKey:@"id" defaultValue:@""];
     NSString *messageId = [rootDictionary objectForKey:@"id"];
     
     if ([messageId isEqualToString:@"existingParticipants"]) {
-        NSLog(@"existingParticipants");
+        [self onExistingParticipants:rootDictionary];
     } else if ([messageId isEqualToString:@"newParticipantArrived"]) {
-        NSLog(@"newParticipantArrived");
+        [self onNewParticipant:rootDictionary];
     } else if ([messageId isEqualToString:@"participantLeft"]) {
-        NSLog(@"participantLeft");
+        [self onParticipantLeft:rootDictionary];
     } else if ([messageId isEqualToString:@"receiveVideoAnswer"]) {
-        NSLog(@"receiveVideoAnswer");
+        [self receiveVideoResponse:rootDictionary];
     } else if ([messageId isEqualToString:@"iceCandidate"]) {
-        NSLog(@"iceCandidate");
+        //取出iceCandidate的name
+        NSString *name = [rootDictionary objectForKey:@"name"];
+        //创建candidate 需要先提取三个创建参数： candidate、sdpMid和sdpMLineIndex
+        NSDictionary *candidateDic = rootDictionary[@"candidate"];
+
+        NSString *sdp = candidateDic[@"candidate"];
+        NSString *sdpMid = candidateDic[@"sdpMid"];
+        int sdpMLineIndex = [candidateDic[@"sdpMLineIndex"] intValue];
+
+        RTCIceCandidate *candidate = [[RTCIceCandidate alloc] initWithSdp:sdp sdpMLineIndex:sdpMLineIndex sdpMid:sdpMid];
+        
+//        [[[Participants objectForKey:name] rtcPeer] addICECandidate:candidate];
+        [[Participants[name] rtcPeer] addIceCandidate:candidate];
+
     } else {
         NSLog(@"webSocket didReceiveMessageWithString:%@",messageId);
     }
@@ -111,9 +126,93 @@
     NSLog(@"WebSocket received pong");
 }
 
-#pragma mark - TEST
-- (void)test:(SRWebSocket *)webSocket {
-        NSString *message = @"{id:\"joinRoom\",name:\"apple1\",room:\"1234\"}";
-        [_webSocket sendString:message error:NULL];
+#pragma mark - 客户端发送的Message
+- (void)register:(NSString*) name Room:(NSString*) room{
+    _myName = name;
+    _myRoom = room;
+    
+    //TODO：--------------房间号、视频框---------------
+    
+    //生成Message包
+    NSString *message = nil;
+//    NSMutableDictionary *dict = [NSMutableDictionary new];
+//    [dict setObject:@"joinRoom" forKey:@"id"];
+//    [dict setObject:_myName forKey:@"name"];
+//    [dict setObject:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    _myRoom forKey:@"room"];
+    NSDictionary *dict = @{@"id":@"joinRoom",@"name":_myName,@"room":_myRoom};
+    if ([NSJSONSerialization isValidJSONObject:dict])
+    {
+        NSError *error;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+        message =[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        if (error) {
+            NSLog(@"Error:%@" , error);
+        }
+    }
+    //发送Message
+    [self sendWebSocket:message];
+
+}//------------------------------------Completed 99%
+
+- (void)leaveRoom{
+    [self sendWebSocket:@"id:leaveRoom"];
+    //清空字典
+    [Participants removeAllObjects];
+
+    [self closeWebSocket];
+}//------------------------------------Completed
+
+- (void) receiveVideo:(NSString*)remoteName{
+    NSLog(@"New Participant %@ \n Count: %ld",remoteName,[Participants count]);
+    //新建Participate
+    Participate *remoteParticipant = [[Participate alloc] initWithName:remoteName];
+    //存入数组
+    [Participants setObject:remoteParticipant forKey:remoteName];
+    //TODO：接Video rtcPeer
+    
 }
+
+#pragma mark - 客户端接受的的Message
+- (void)onExistingParticipants:(NSDictionary *)messageDic{
+    
+    //TODO: 对对象窗口进行约束。设置长宽高等参数
+    
+    //创建本地Participate对象。
+    localParticipant = [[Participate alloc] initWithName:_myName];
+    
+    NSLog(@"Participant %@ is registed",[localParticipant name]);
+    //本地Participate对象 存入字典
+//    [Participants setObject:localParticipant forKey:_myName];
+    Participants[_myName]=localParticipant;
+    NSLog(@"Participants Count: %ld",[Participants count]);
+    
+    //TODO：获取Video
+    
+    //TODO: 对messageDic里的data部分(就是房间已经存在的参与者name) 挨个执行receiveVideo
+    NSArray *messageData = [messageDic objectForKey:@"data"];
+    for(id eachParticipant in messageData){
+        [self receiveVideo:eachParticipant];
+    }
+}
+
+- (void) onNewParticipant:(NSDictionary *)messageDic{
+    NSString *remoteName = [messageDic objectForKey:@"name"];
+    
+    [self receiveVideo:remoteName];
+}//---onExistingParticipants Completed
+
+- (void) onParticipantLeft:(NSDictionary *)messageDic{
+    NSString *remoteName = [messageDic objectForKey:@"name"];
+    NSLog(@"Participant %@ left",remoteName);
+    //销毁 对象
+    //没有网上说的release方法啊。。。先不销毁了。
+    [Participants removeObjectForKey:remoteName];
+}//---onParticipantLeft Completed
+
+- (void) receiveVideoResponse:(NSDictionary *)messageDic{
+    //NSString *remoteName = [messageDic objectForKey:@"name"];
+    //TODO:
+    //[[Participants objectForKey:remoteName] rtcPeer方法 处理Answer]
+}
+
 @end

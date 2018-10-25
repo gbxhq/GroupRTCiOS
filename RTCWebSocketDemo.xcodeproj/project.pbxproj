@@ -33,7 +33,26 @@
 		4AC614342148EEBB008DFA3E /* SRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6141D2148EEBB008DFA3E /* SRConstants.m */; };
 		4AC614352148EEBB008DFA3E /* NSURLRequest+SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC614222148EEBB008DFA3E /* NSURLRequest+SRWebSocket.m */; };
 		4AC614382148F117008DFA3E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC614372148F117008DFA3E /* libicucore.tbd */; };
+		5F2A04392176D54E006F8B38 /* PeerConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2A04382176D54E006F8B38 /* PeerConnectionClient.m */; };
+		5F6873E02151E593002C9D9C /* Participate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6873DF2151E593002C9D9C /* Participate.m */; };
+		5FA2EAC1216C39C600DCAF98 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA2EAC0216C39C600DCAF98 /* WebRTC.framework */; };
+		5FA2EAC2216C39C600DCAF98 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA2EAC0216C39C600DCAF98 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5FB2FD8F214F81F100FEDDB1 /* GroupCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB2FD8E214F81F100FEDDB1 /* GroupCallViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5FA2EAC3216C39C600DCAF98 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5FA2EAC2216C39C600DCAF98 /* WebRTC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4AC613D92148EE14008DFA3E /* RTCWebSocketDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTCWebSocketDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +107,13 @@
 		4AC614212148EEBB008DFA3E /* SRSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSecurityPolicy.h; sourceTree = "<group>"; };
 		4AC614222148EEBB008DFA3E /* NSURLRequest+SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+SRWebSocket.m"; sourceTree = "<group>"; };
 		4AC614372148F117008DFA3E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		5F2A04372176D54E006F8B38 /* PeerConnectionClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeerConnectionClient.h; sourceTree = "<group>"; };
+		5F2A04382176D54E006F8B38 /* PeerConnectionClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeerConnectionClient.m; sourceTree = "<group>"; };
+		5F6873DE2151E593002C9D9C /* Participate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Participate.h; sourceTree = "<group>"; };
+		5F6873DF2151E593002C9D9C /* Participate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Participate.m; sourceTree = "<group>"; };
+		5FA2EAC0216C39C600DCAF98 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
+		5FB2FD8D214F81F100FEDDB1 /* GroupCallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupCallViewController.h; sourceTree = "<group>"; };
+		5FB2FD8E214F81F100FEDDB1 /* GroupCallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupCallViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC614382148F117008DFA3E /* libicucore.tbd in Frameworks */,
+				5FA2EAC1216C39C600DCAF98 /* WebRTC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +132,7 @@
 		4AC613D02148EE14008DFA3E = {
 			isa = PBXGroup;
 			children = (
+				5FA2EAC0216C39C600DCAF98 /* WebRTC.framework */,
 				4AC613DB2148EE14008DFA3E /* RTCWebSocketDemo */,
 				4AC613DA2148EE14008DFA3E /* Products */,
 				4AC614362148F116008DFA3E /* Frameworks */,
@@ -124,14 +152,20 @@
 			children = (
 				4AC613DC2148EE15008DFA3E /* AppDelegate.h */,
 				4AC613DD2148EE15008DFA3E /* AppDelegate.m */,
+				5F6873DE2151E593002C9D9C /* Participate.h */,
+				5F6873DF2151E593002C9D9C /* Participate.m */,
 				4AC613DF2148EE15008DFA3E /* ViewController.h */,
 				4AC613E02148EE15008DFA3E /* ViewController.m */,
-				4AC613F22148EEBB008DFA3E /* SocketRocket */,
+				5FB2FD8D214F81F100FEDDB1 /* GroupCallViewController.h */,
+				5FB2FD8E214F81F100FEDDB1 /* GroupCallViewController.m */,
 				4AC613E22148EE15008DFA3E /* Main.storyboard */,
+				4AC613F22148EEBB008DFA3E /* SocketRocket */,
 				4AC613E52148EE15008DFA3E /* Assets.xcassets */,
 				4AC613E72148EE15008DFA3E /* LaunchScreen.storyboard */,
 				4AC613EA2148EE15008DFA3E /* Info.plist */,
 				4AC613EB2148EE15008DFA3E /* main.m */,
+				5F2A04372176D54E006F8B38 /* PeerConnectionClient.h */,
+				5F2A04382176D54E006F8B38 /* PeerConnectionClient.m */,
 			);
 			path = RTCWebSocketDemo;
 			sourceTree = "<group>";
@@ -258,6 +292,7 @@
 				4AC613D52148EE14008DFA3E /* Sources */,
 				4AC613D62148EE14008DFA3E /* Frameworks */,
 				4AC613D72148EE14008DFA3E /* Resources */,
+				5FA2EAC3216C39C600DCAF98 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,9 +356,11 @@
 			files = (
 				4AC6142A2148EEBB008DFA3E /* SRMutex.m in Sources */,
 				4AC614312148EEBB008DFA3E /* SRSIMDHelpers.m in Sources */,
+				5FB2FD8F214F81F100FEDDB1 /* GroupCallViewController.m in Sources */,
 				4AC614272148EEBB008DFA3E /* SRRunLoopThread.m in Sources */,
 				4AC614322148EEBB008DFA3E /* SRIOConsumer.m in Sources */,
 				4AC614332148EEBB008DFA3E /* SRIOConsumerPool.m in Sources */,
+				5F6873E02151E593002C9D9C /* Participate.m in Sources */,
 				4AC614292148EEBB008DFA3E /* SRDelegateController.m in Sources */,
 				4AC6142F2148EEBB008DFA3E /* SRError.m in Sources */,
 				4AC6142D2148EEBB008DFA3E /* SRLog.m in Sources */,
@@ -338,6 +375,7 @@
 				4AC6142B2148EEBB008DFA3E /* SRHTTPConnectMessage.m in Sources */,
 				4AC614282148EEBB008DFA3E /* SRPinningSecurityPolicy.m in Sources */,
 				4AC6142E2148EEBB008DFA3E /* SRHash.m in Sources */,
+				5F2A04392176D54E006F8B38 /* PeerConnectionClient.m in Sources */,
 				4AC614342148EEBB008DFA3E /* SRConstants.m in Sources */,
 				4AC613DE2148EE15008DFA3E /* AppDelegate.m in Sources */,
 				4AC614352148EEBB008DFA3E /* NSURLRequest+SRWebSocket.m in Sources */,
@@ -479,12 +517,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QF8M8CA7XR;
+				DEVELOPMENT_TEAM = 8QAY8ZU89P;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RTCWebSocketDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sipsys.RTCWebSocketDemo;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixs.RTCWebSocketDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -495,12 +538,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QF8M8CA7XR;
+				DEVELOPMENT_TEAM = 8QAY8ZU89P;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RTCWebSocketDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sipsys.RTCWebSocketDemo;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixs.RTCWebSocketDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -19,35 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+}
+- (void)viewDidAppear:(BOOL)animated{
+    //每次回到界面都连接
+    [(AppDelegate*)[UIApplication sharedApplication].delegate connectWebSocket];
+    NSLog(@"连接WebSocket");
 }
 
 - (IBAction)btnJoin:(id)sender {
     
-    NSString *message = nil;
-    
-    NSMutableDictionary *dict = [NSMutableDictionary new];
-    [dict setObject:@"joinRoom" forKey:@"id"];
-    [dict setObject:_nameText.text forKey:@"name"];
-    [dict setObject:_roomText.text forKey:@"room"];
-   
-    if ([NSJSONSerialization isValidJSONObject:dict])
-    {
-        NSError *error;
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
-        message =[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        if (error) {
-            NSLog(@"Error:%@" , error);
-        }
-    }
-    NSLog(@"Send data:%@",message);
-    
-    [(AppDelegate*)[UIApplication sharedApplication].delegate sendWebSocket:message];
+    //点击Join
+    [(AppDelegate*)[UIApplication sharedApplication].delegate register:_nameText.text Room:_roomText.text];
 
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
